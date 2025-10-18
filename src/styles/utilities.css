@@ -1,0 +1,10 @@
+/* utilities.css */
+@layer base {
+  html, body {
+    @apply bg-white text-gray-900;
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+}
