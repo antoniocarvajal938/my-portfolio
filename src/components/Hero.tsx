@@ -3,50 +3,54 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import myPhoto from "../assets/my-photo.jpg";
 
-export default function Hero() {
+function Particle({ size, x, y, delay }: { size: number; x: number; y: number; delay: number }) {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-start min-h-screen p-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-      
-      {/* Fondo dinámico con capas flotantes */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-      >
-        <div className="absolute w-96 h-96 bg-blue-500 rounded-full opacity-20 blur-3xl -top-32 -left-32"></div>
-        <div className="absolute w-72 h-72 bg-purple-500 rounded-full opacity-20 blur-3xl -bottom-24 right-16"></div>
-      </motion.div>
+    <motion.div
+      className="absolute rounded-full bg-blue-500 opacity-20"
+      style={{
+        width: size,
+        height: size,
+        top: `${y}%`,
+        left: `${x}%`,
+      }}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1, opacity: [0.2, 0.5, 0.2] }}
+      transition={{
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 4 + Math.random() * 3,
+        delay,
+      }}
+    />
+  );
+}
 
-      {/* Contenido */}
-      <div className="flex flex-col items-start justify-center flex-1 z-10 mb-8 md:mb-0">
+export default function Hero() {
+  const particles = Array.from({ length: 12 }).map((_, i) => ({
+    size: 10 + Math.random() * 20,
+    x: Math.random() * 100,
+    y: Math.random() * 80,
+    delay: Math.random() * 5,
+  }));
+
+  return (
+    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen p-8 bg-gray-900 text-white overflow-hidden">
+      {/* Partículas de fondo */}
+      {particles.map((p, i) => (
+        <Particle key={i} size={p.size} x={p.x} y={p.y} delay={p.delay} />
+      ))}
+
+      {/* Lado izquierdo: texto */}
+      <div className="flex flex-col items-start justify-center flex-1 mb-8 md:mb-0 z-10">
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-extrabold mb-4"
         >
-          Hi there 
-
-          {/* Emoji 👋🏻 animado de saludo */}
-          <motion.span
-          role="img"
-          aria-label="wave"
-          className="inline-block ml-3"
-          animate={{ rotate: [0, 20, -20, 20, 0]}}
-          transition={{ duration: 1, repeat: Infinity, ease: "easeInOut"}}
-          >👋🏻</motion.span>
+          Hi there <span>👋</span>
         </motion.h1>
 
-        <motion.h2
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold mb-4"
-        >
-          I'm <span className="text-blue-400">Antonio Carvajal</span>
-        </motion.h2>
-        <br></br>
-        <br></br>
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -65,22 +69,19 @@ export default function Hero() {
         </motion.h2>
       </div>
 
-      {/* Imagen a la derecha */}
+      {/* Lado derecho: imagen */}
       <motion.div
-        className="w-72 md:w-80 lg:w-96 h-72 md:h-80 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-blue-500 ml-12 z-10"
-        initial={{ opacity: 0, x: 50 }} //entra desde la derecha
-        animate={{ opacity: 1, x: 0 }}  //se posiciona en su lugar
-        transition={{ type: "spring", stiffness: 50, damping: 12 }}
+        className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-blue-500 -ml-32 md:-ml-48 z-10"
+        initial={{ x: 50 }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 50 }}
       >
-        <motion.img
+        <img
           src={myPhoto.src}
           alt="Antonio Carvajal"
-          className="w-full h-full object-cover rounded-full border-4 border-blue-500"
-          animate={{ y: [0, -15, 0] }}  //flotación suave vertical
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="w-72 h-72 md:w-80 md:h-80 rounded-full object-cover border-4 border-blue-500"
         />
       </motion.div>
-
     </section>
   );
 }

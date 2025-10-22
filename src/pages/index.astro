@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Hero from "../components/Hero.tsx";
+import About from "../components/About.tsx";
 ---
 
 <html lang="es">
@@ -9,7 +10,11 @@ import Hero from "../components/Hero.tsx";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Portfolio</title>
   </head>
-  <body>
+  <body class="bg-gray-900 text-white">
+    {/* Hero */}
     <Hero client:load />
+
+    {/* About */}
+    <About client:load />
   </body>
 </html>
