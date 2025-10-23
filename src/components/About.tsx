@@ -12,11 +12,10 @@ import {
   SiCss3,
   SiMysql,
   SiGit,
-  SiGithub,
-  SiGitlab,
-  SiJirasoftware,
+  SiCypress,
   SiPostman,
   SiAstro,
+  SiCucumber
 } from "react-icons/si";
 
   
@@ -38,9 +37,10 @@ const techStack = [
   { icon: SiAstro, name: "Astro", category: "Web" },
 
   // QA / Testing (secundario)
-  { icon: SiGit, name: "Git" },
-  { icon: SiJirasoftware, name: "Jira", category: "QA" },
+  { icon: SiGit, name: "Git" , category: "QA" },
+  { icon: SiCypress, name: "Cypress", category: "QA" },
   { icon: SiPostman, name: "Postman", category: "QA" },
+  { icon: SiCucumber, name: "Cucumber", category: "QA" },
 ];
 
 export default function About() {
