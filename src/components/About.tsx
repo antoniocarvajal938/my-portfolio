@@ -25,9 +25,9 @@ const techStack = [
   { icon: SiAndroid, name: "Android Studio", category: "Mobile" },
   { icon: SiKotlin, name: "Kotlin / Jetpack Compose", category: "Mobile" },
   { icon: SiOpenjdk, name: "Java", category: "Mobile" },
-  { icon: SiJavascript, name: "JavaScript", category: "Mobile" },
-  { icon: SiTypescript, name: "TypeScript", category: "Mobile" },
-  { icon: SiMysql, name: "SQLite / SQL", category: "Mobile" },
+  { icon: SiJavascript, name: "JavaScript", category: "Web" },
+  { icon: SiTypescript, name: "TypeScript", category: "Web" },
+  { icon: SiMysql, name: "SQLite / SQL", category: "Web" },
 
   // Web (secundario)
   { icon: SiHtml5, name: "HTML5", category: "Web" },
@@ -55,7 +55,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-             <span className="text-blue-400">LET</span> <span className="text-white">ME</span> <span className="text-blue-400">INTRODUCE</span> <span className="text-white">MYSELF</span>
+             <span className="text-blue-500">LET</span> <span className="text-white">ME</span> <span className="text-blue-500">INTRODUCE</span> <span className="text-white">MYSELF</span>
           </h2>
           <p className="text-gray-300 text-lg md:text-xl mb-4">
             I am a passionate <span className="text-blue-500 font-semibold">Mobile App Developer 📱 </span> 
