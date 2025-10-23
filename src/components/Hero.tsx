@@ -54,6 +54,18 @@ export default function Hero() {
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-3xl md:text-4xl font-bold mb-4"
+        >
+          I’m <span className="text-blue-400">Antonio Carvajal</span>
+        </motion.h2>
+
+        <br></br>
+        <br></br>
+
+        <motion.h2
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-2xl md:text-3xl font-mono text-blue-400"
         >
