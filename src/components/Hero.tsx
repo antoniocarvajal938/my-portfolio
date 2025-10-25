@@ -11,7 +11,7 @@ export default function Hero() {
 >
 
       {/* Lado izquierdo: texto */}
-      <div className="flex flex-col items-start justify-center flex-1 mb-8 md:mb-0">
+<div className="relative flex flex-col items-center md:items-end justify-center mt-8 md:mt-0 md:mr-20 lg:mr-40">
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -57,57 +57,59 @@ export default function Hero() {
       </div>
 
       {/* Lado derecho: imagen + iconos */}
-      <div className="relative flex flex-col items-center md:items-start justify-center">
+<div className="relative flex flex-col items-center md:items-end justify-center mt-8 md:mt-0 md:mr-20 lg:mr-28">
 
-        <motion.div
-          className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-[0_0_20px_#f97316] border-4 border-orange-500 right-80"
-          initial={{ x: 50 }}
-          animate={{ x: 0 }}
-          transition={{ type: 'spring', stiffness: 50 }}
-          whileHover={{scale: 1.1}} >
-          <img
-            src={myPhoto.src}
-            alt="Antonio Carvajal"
-            className="w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-orange-500 object-cover"
-          />
-        </motion.div>
+  <motion.div
+    className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-[0_0_20px_#f97316] border-4 border-orange-500"
+    initial={{ x: 50 }}
+    animate={{ x: 0 }}
+    transition={{ type: 'spring', stiffness: 50 }}
+    whileHover={{scale: 1.1}}
+  >
+    <img
+      src={myPhoto.src}
+      alt="Antonio Carvajal"
+      className="w-full h-full rounded-full border-4 border-orange-500 object-cover"
+    />
+  </motion.div>
 
-        {/* Iconos sociales separados del borde */}
-        <motion.div
-        className="absolute right-48 flex flex-col gap-6 z-20"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.3, ease: [0.42, 0, 0.58, 1] }}>
-          <motion.a
-            href="https://www.linkedin.com/in/antonio-carvajal-mu%C3%B1oz-21b27a182/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.5 }}
-            className="text-orange-400 hover:text-orange-500 transition-colors"
-          >
-            <FaLinkedin size={40} />
-          </motion.a>
+  {/* Iconos sociales - Debajo en móvil, al lado en desktop */}
+  <motion.div
+    className="flex md:flex-col gap-6 z-20 mt-6 md:mt-0 md:absolute md:-right-16 lg:-right-20 xl:-right-24"
+    initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8, delay: 0.3, ease: [0.42, 0, 0.58, 1] }}
+  >
+    <motion.a
+      href="https://www.linkedin.com/in/antonio-carvajal-mu%C3%B1oz-21b27a182/" 
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.5 }}
+      className="text-orange-400 hover:text-orange-500 transition-colors"
+    >
+      <FaLinkedin size={40} />
+    </motion.a>
 
-          <motion.a
-            href="https://github.com/antoniocarvajal938" 
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.5 }}
-            className="text-white hover:text-white transition-colors"
-          >
-            <FaGithub size={40} />
-          </motion.a>
+    <motion.a
+      href="https://github.com/antoniocarvajal938" 
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.5 }}
+      className="text-white hover:text-white transition-colors"
+    >
+      <FaGithub size={40} />
+    </motion.a>
 
-          <motion.a
-            href="mailto:carvajalwk@gmail.com" 
-            whileHover={{ scale: 1.5 }}
-            className="text-orange-400 hover:text-orange-500 transition-colors"
-          >
-            <FaEnvelope size={40} />
-          </motion.a>
-        
-      </motion.div>
-      </div>
+    <motion.a
+      href="mailto:carvajalwk@gmail.com" 
+      whileHover={{ scale: 1.5 }}
+      className="text-orange-400 hover:text-orange-500 transition-colors"
+    >
+      <FaEnvelope size={40} />
+    </motion.a>
+  </motion.div>
+
+</div>
     </section>
   );
 } 

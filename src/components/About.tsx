@@ -86,7 +86,7 @@ export default function About() {
             constantly learning new technologies and improving my skills 🌟.
           </p>
           <p className="text-gray-300 text-lg md:text-xl">
-            Outside of coding, I enjoy collaborating with other developers 🤝,
+            Outside of coding, I enjoy collaborating with other developers 🤝🏻,
             exploring new tools and frameworks, and bringing creative ideas to
             life.
           </p>
