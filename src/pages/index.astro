@@ -1,21 +1,18 @@
 ---
+// src/pages/index.astro
 import "../styles/global.css";
-import Hero from "../components/Hero.tsx";
-import About from "../components/About.tsx";
+import Layout from "../layouts/layout.astro";
+import GridBackground from "../components/GridBackground";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Footer from "../components/Footer";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AC | Portfolio</title>
-  </head>
-  <body class="bg-gray-900 text-white">
-    
-    {/* Hero */}
-    <Hero client:load />
-
-    {/* About */}
-    <About client:load />
-  </body>
-</html>
+<Layout title="Antonio Carvajal - Portfolio">
+  <GridBackground client:load />
+  <Navbar client:load />
+  <Hero client:load />
+  <About client:load />
+  <Footer client:load />
+</Layout>
