@@ -43,7 +43,7 @@ export default function Hero() {
           className="text-2xl md:text-3xl font-mono text-orange-300"
         >
           <Typewriter
-            words={["Mobile App Developer"]}
+            words={["Quality Assurance"]}
             loop={true}
             cursor
             cursorStyle="_"
