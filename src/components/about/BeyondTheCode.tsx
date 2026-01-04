@@ -17,7 +17,6 @@ const cardsData = [
       { name: "Kotlin", icon: SiKotlin },
       { name: "React", icon: SiReact },
       { name: "TypeScript", icon: SiTypescript },
-      { name: "Cypress", icon: SiCypress },
     ],
     stats: { 
       mobile: "Android", 
