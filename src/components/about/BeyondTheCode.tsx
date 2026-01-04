@@ -2,7 +2,7 @@ import { motion, type Variants } from "framer-motion";
 import EnhancedFlipCard from "../about/EnhancedFlipCard";
 import { FaBug, FaHandshake, FaGamepad } from "react-icons/fa";
 import { 
-  SiCypress, SiPostman, SiKotlin, SiReact, 
+  SiPostman, SiKotlin, SiReact, 
   SiJira, SiGithub, SiTypescript
 } from "react-icons/si";
 
@@ -44,9 +44,9 @@ const cardsData = [
     title: "Offline",
     subtitle: "Personal Life",
     color: "deepOrange" as const, // 🔥 Naranja oscuro/rojo
-    description: "When I'm not testing or coding, I'm probably lifting weights at the gym 🏋🏻, lost in a video game 🎮, or exploring new places. Balance is key to performance.",
+    description: "When I'm not testing or coding, I'm probably spending time with my dog, lost in a video game or exploring new places. Balance is key to performance.",
     skills: [
-      { name: "Fitness", emoji: "🏋🏻" },
+      { name: "Dog", emoji: "🐶" },
       { name: "Gaming", emoji: "🎮" },
       { name: "Travel", emoji: "✈️" },
     ],
@@ -140,7 +140,7 @@ export default function BeyondTheCode() {
         viewport={{ once: true }}
       >
         <p className="text-gray-400 text-sm">
-          💡 Click on each card to discover more
+          💡 Interact with each card to discover more
         </p>
       </motion.div>
     </motion.div>

@@ -193,7 +193,7 @@ export default function EnhancedFlipCard({
         {/* BACK FACE */}
         <div
           className={`absolute inset-0 w-full h-full rounded-2xl border-2 ${styles.border}
-          bg-gradient-to-br from-[#020617] via-[#030712] to-[#020617]
+          bg-gradient-to-br  bg-black  border border-orange-600
 
  backdrop-blur-xl
           [backface-visibility:hidden] [transform:rotateY(180deg)]
