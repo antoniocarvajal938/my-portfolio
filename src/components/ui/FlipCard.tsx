@@ -1,5 +1,5 @@
 // src/components/FlipCard.tsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 interface FlipCardProps {
@@ -17,10 +17,29 @@ const FlipCard: React.FC<FlipCardProps> = ({
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [canHover, setCanHover] = useState(false);
+
+  // Detect real hover capability (Safari-safe)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const mediaQuery = window.matchMedia(
+      "(hover: hover) and (pointer: fine)"
+    );
+
+    setCanHover(mediaQuery.matches);
+
+    const handler = (e: MediaQueryListEvent) => {
+      setCanHover(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
 
   const handleFlip = () => {
     if (!isAnimating) {
-      setIsFlipped(!isFlipped);
+      setIsFlipped((prev) => !prev);
       setIsAnimating(true);
     }
   };
@@ -28,9 +47,9 @@ const FlipCard: React.FC<FlipCardProps> = ({
   return (
     <div
       className="w-full h-72 cursor-pointer perspective-1000"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
-      onClick={handleFlip}
+      onMouseEnter={() => canHover && setIsFlipped(true)}
+      onMouseLeave={() => canHover && setIsFlipped(false)}
+      onClick={() => !canHover && handleFlip()}
     >
       <motion.div
         className="relative w-full h-full transform-gpu will-change-transform"
@@ -58,6 +77,11 @@ const FlipCard: React.FC<FlipCardProps> = ({
             <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
             <p className="text-orange-300 font-medium tracking-wide text-sm uppercase">
               {subtitle}
+            </p>
+
+            {/* UX hint */}
+            <p className="mt-4 text-sm text-gray-400">
+              {canHover ? "Hover to explore" : "Tap to explore"}
             </p>
           </div>
 
