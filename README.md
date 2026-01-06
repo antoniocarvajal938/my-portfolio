@@ -68,7 +68,7 @@ The portfolio is deployed using **Vercel** with an automatic CI/CD pipeline.
 
 ## 📬 Contact
 
-- 💼 LinkedIn: https://www.linkedin.com/in/antonio-carvajal
+- 💼 LinkedIn: https://www.linkedin.com/in/antoniocarvajal938/
 - 🐙 GitHub: https://github.com/antoniocarvajal938
 - ✉️ Email: carvajalwk@gmail.com
 
