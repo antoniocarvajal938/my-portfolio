@@ -32,7 +32,7 @@ const cardsData = [
     skills: [
       { name: "Agile/Scrum", icon: SiJira },
       { name: "Git/GitHub", icon: SiGithub },
-      { name: "Postman", icon: SiPostman },
+      
     ],
     stats: { 
       methodology: "Agile", 
@@ -51,7 +51,7 @@ const cardsData = [
       { name: "Travel", emoji: "✈️" },
     ],
     stats: { 
-      mindset: "Growth", 
+      Enjoy: "Hobbies", 
       lifestyle: "Active" 
     }
   },

@@ -6,7 +6,7 @@ import myPhoto from "../assets/my-photo.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen p-8 text-white overflow-hidden">
+<section className="relative flex flex-col md:flex-row items-center justify-center md:justify-between min-h-screen p-8">
       {/* Lado izquierdo: texto */}
       <div className="relative flex flex-col items-center md:items-end justify-center mt-8 md:mt-0 md:mr-20 lg:mr-40">
         <motion.h1

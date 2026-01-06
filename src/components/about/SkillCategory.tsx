@@ -18,7 +18,7 @@ export default function SkillCategory({ category, variants }: SkillCategoryProps
         ${
           isPrimary
             ? "border-orange-500 shadow-[0_0_20px_rgba(249,115,22,0.15)]"
-            : "border-gray-800 hover:border-orange-500/50"
+            : "border-orange-500/50 hover:border-orange-500/50"
         }
         transition-all duration-300 hover:-translate-y-1
       `}

@@ -35,7 +35,11 @@ export default function Navbar() {
   const links = [
     { name: "Home", icon: <AiOutlineHome />, href: "#hero" },
     { name: "About", icon: <AiOutlineUser />, href: "#about" },
-    { name: "Projects", icon: <AiOutlineFundProjectionScreen />, href: "#projects" },
+    {
+      name: "Projects",
+      icon: <AiOutlineFundProjectionScreen />,
+      href: "#projects",
+    },
     { name: "CV", icon: <CgFileDocument />, href: "#cv" },
   ];
 
@@ -48,7 +52,10 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto flex items-center justify-between p-4 md:p-6">
         {/* Logo */}
         <motion.div variants={logoVariant} initial="hidden" animate="visible">
-          <a href="#hero" className="text-white font-bold text-xl md:text-2xl tracking-wide">
+          <a
+            href="#hero"
+            className="text-white font-bold text-xl md:text-2xl tracking-wide"
+          >
             Antonio Carvajal
           </a>
         </motion.div>
@@ -103,21 +110,33 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-black/95 backdrop-blur-lg"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="md:hidden bg-gradient-to-b from-black/95 to-black/85 backdrop-blur-xl"
           >
-            <ul className="flex flex-col items-center gap-6 py-8 text-white font-medium">
+            <ul className="flex flex-col items-center gap-8 py-10 text-white">
               {links.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="hover:text-orange-500 flex items-center gap-2 text-lg"
+                    className="
+    flex items-center gap-4
+    px-6 py-3
+    text-xl font-medium
+    rounded-full
+    bg-white/5
+    hover:bg-orange-500/10
+    hover:text-orange-400
+    transition-all duration-300
+  "
                   >
-                    {link.icon} {link.name}
+                    <span className="text-2xl text-orange-400">
+                      {link.icon}
+                    </span>
+                    {link.name}
                   </a>
                 </li>
               ))}
