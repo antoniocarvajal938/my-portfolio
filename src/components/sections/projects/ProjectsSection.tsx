@@ -3,7 +3,7 @@ import { projects } from "./ProjectsData";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="relative py-24">
+    <section id="projects" className="relative py-24 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
         <div className="mb-12 max-w-2xl">

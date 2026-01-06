@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SkillBadge from "./SkillBadge";
-import type { TechCategory } from "./techData";
+import type { TechCategory } from "../../data/techData";
 
 interface SkillCategoryProps {
   category: TechCategory;

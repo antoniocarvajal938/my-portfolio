@@ -1,6 +1,6 @@
 export default function CVSection() {
   return (
-    <section id="cv" className="relative py-28">
+    <section id="cv" className="relative py-28 scroll-mt-24">
       <div className="mx-auto max-w-4xl px-6">
         <div
           className="

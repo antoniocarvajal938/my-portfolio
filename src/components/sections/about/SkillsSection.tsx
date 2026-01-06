@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import SkillCategory from "./SkillCategory";
-import { techCategories } from "./techData";
+import SkillCategory from "../../ui/SkillCategory";
+import { techCategories } from "../../../data/techData";
 
 export default function SkillsSection() {
   const containerVariants = {

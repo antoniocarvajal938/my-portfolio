@@ -1,5 +1,5 @@
 import { motion, type Variants } from "framer-motion";
-import EnhancedFlipCard from "../about/EnhancedFlipCard";
+import EnhancedFlipCard from "../../ui/EnhancedFlipCard";
 import { FaBug, FaHandshake, FaGamepad } from "react-icons/fa";
 import { 
   SiPostman, SiKotlin, SiReact, 

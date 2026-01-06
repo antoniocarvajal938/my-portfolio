@@ -2,11 +2,14 @@ import React from "react";
 import { motion, scale } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import myPhoto from "../assets/my-photo.jpg";
+import myPhoto from "../../../assets/images/my-photo.jpg";
 
 export default function Hero() {
   return (
-<section className="relative flex flex-col md:flex-row items-center justify-center md:justify-between min-h-screen p-8">
+    <section
+      id="hero"
+      className="relative flex flex-col md:flex-row items-center justify-center md:justify-between min-h-screen p-8 scroll-mt-24"
+    >
       {/* Lado izquierdo: texto */}
       <div className="relative flex flex-col items-center md:items-end justify-center mt-8 md:mt-0 md:mr-20 lg:mr-40">
         <motion.h1

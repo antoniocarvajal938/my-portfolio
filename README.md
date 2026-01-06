@@ -1,43 +1,77 @@
-# Astro Starter Kit: Minimal
+# 🚀 Antonio Carvajal – Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Personal portfolio website built to showcase my skills, projects and experience as a **Quality Assurance & Web/Mobile Developer**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Designed and developed with a strong focus on:
+- Clean UI / UX
+- Mobile-first design
+- Performance and maintainability
+- Professional presentation for recruiters
 
-## 🚀 Project Structure
+🌐 **Live website:**  
+👉 https://antoniocarvajal938-portfolio.vercel.app/
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🧠 About Me
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+I am a **Quality Assurance professional** with experience in:
+- Manual and automated testing
+- Web Development
+- Mobile Devlopment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+This portfolio represents both my **technical skills** and my **attention to detail**, especially in usability, animations and responsive behavior.
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## 🛠️ Tech Stack
 
-All commands are run from the root of the project, from a terminal:
+- **Astro**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Vercel** (deployment)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## ✨ Features
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- ⚡ Single-page smooth scrolling navigation
+- 📱 Fully responsive (mobile-first)
+- 🎨 Modern UI with subtle animations
+- 🧩 Modular and scalable project structure
+- 🧪 QA-oriented mindset applied to UX details
+
+---
+
+## 📄 CV
+
+My CV is available in **both languages**:
+
+- 🇪🇸 Spanish  
+- 🇬🇧 English  
+
+They are located in the `/public/cv` folder and can also be downloaded directly from the website.
+
+---
+
+## 🚀 Deployment
+
+The portfolio is deployed using **Vercel** with an automatic CI/CD pipeline.
+
+- Every push to the `main` branch triggers a new production deployment
+- Preview deployments are generated for other branches
+- Optimized for performance and reliability
+
+---
+
+## 📬 Contact
+
+- 💼 LinkedIn: https://www.linkedin.com/in/antonio-carvajal
+- 🐙 GitHub: https://github.com/antoniocarvajal938
+- ✉️ Email: carvajalwk@gmail.com
+
+---
+
+⭐ If you find this project interesting or useful, feel free to give it a star!

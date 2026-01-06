@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument, CgGitFork } from "react-icons/cg";
 import { AiFillStar } from "react-icons/ai";
+import { HiOutlineMenu } from "react-icons/hi";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,10 +100,10 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-white cursor-pointer"
+          className="md:hidden text-white cursor-pointer p-2"
           aria-label="Toggle menu"
         >
-          ☰
+          <HiOutlineMenu className="w-8 h-8 sm:w-9 sm:h-9" />
         </button>
       </nav>
 
