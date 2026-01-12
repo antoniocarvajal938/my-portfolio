@@ -34,12 +34,12 @@ export const projects: Project[] = [
   },
   {
     id: "testing-playground",
-    title: "Testing Playground",
+    title: "Playwright E2E Testing Project",
     description:
-      "Personal project to practice and showcase frontend testing strategies and tools.",
-    stack: ["TypeScript", "Cypress", "Playwright"],
+      "Personal project to practice and showcase end-to-end and smoke test automation using Playwright.",
+    stack: ["TypeScript","Playwright"],
     image: "/assets/projects/testing-preview.jpg", 
-    repoUrl:"https://github.com/antoniocarvajal938/Testing-Playground",
-    status: "in-progress",
+    repoUrl:"https://github.com/antoniocarvajal938/playwright-e2e-testing-project",
+    status: "completed",
   },
 ];
