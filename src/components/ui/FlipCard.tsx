@@ -34,18 +34,25 @@ const FlipCard: React.FC<FlipCardProps> = ({
 
   return (
     <div
-      className="w-full h-72 cursor-pointer perspective-1000"
+      className="w-full h-72 cursor-pointer"
+      style={{
+        perspective: "1000px",
+        WebkitPerspective: "1000px",
+      }}
       onMouseEnter={() => canHover && setIsFlipped(true)}
       onMouseLeave={() => canHover && setIsFlipped(false)}
       onClick={() => !canHover && setIsFlipped((prev) => !prev)}
+      onTouchStart={() => !canHover && setIsFlipped((prev) => !prev)}
     >
       <motion.div
-        className="relative w-full h-full transform-gpu will-change-transform"
+        className="relative w-full h-full will-change-transform"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.7, ease: "easeInOut" }}
         style={{
           transformStyle: "preserve-3d",
           WebkitTransformStyle: "preserve-3d",
+          transform: "translateZ(0)",
+          WebkitTransform: "translateZ(0)",
         }}
       >
         {/* FRONT */}
@@ -75,8 +82,8 @@ const FlipCard: React.FC<FlipCardProps> = ({
         <div
           className="absolute inset-0 w-full h-full rounded-2xl border-2 border-orange-500 bg-gray-900/95 backdrop-blur-xl p-6 flex flex-col items-center justify-center text-center"
           style={{
-            transform: "rotateY(180deg)",
-            WebkitTransform: "rotateY(180deg)",
+            transform: "rotateY(180deg) translateZ(1px)",
+            WebkitTransform: "rotateY(180deg) translateZ(1px)",
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
           }}
